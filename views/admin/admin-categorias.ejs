@@ -1,0 +1,23 @@
+<%-include('header-admin-add-category') %>
+<main>
+    <section class="container">
+        <h4>Categorias</h4>
+        <br>
+        <br>
+            <% categorias.forEach(categoria => { %>
+                <div class="row">
+                    <div class="col s12 m5">
+                      <div class="card-panel teal">
+                        <h6 class="white-text" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                            <%-categoria.categoria_nome %> 
+                            <a href="/admin/categorias/delete/<%-categoria.id%>" style="color: white; display: flex; flex-direction: row; justify-content: flex-end; align-items: center;"><i class="material-icons white-text">delete</i>Excluir</a>
+                        </h6>
+                      </div>
+                    </div>
+                </div>
+           <% }) %>
+            
+        
+    </section>
+</main>
+<%-include('footer') %>

@@ -1,0 +1,30 @@
+<%- include('header-admin-add-vagas') %>
+<main>
+    <main class="container">
+        <h3 class="">Vagas: </h3>
+        <% categorias.forEach(categoria => { %>
+            <div class="row">                
+                    <% categoria.vagas.forEach(vaga => { %>
+                        <div class="col s12 m4">
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                    <span class="card-title"><%-vaga.titulo  %> </span>
+                                    <p><%-vaga.descricao %> </p>
+                                    <br>
+                                    <br>
+                                    <span class="white-text"> Setor: <%- categoria.categoria_nome %> </span>
+                                </div>
+                                <div class="card-action" style="display: flex; flex-direction: row; align-items: center; justify-content: flex-end;">
+                                    <a href="/admin/vagas/editar/<%-vaga.id%>"><i class="material-icons white-text">edit</i>Editar</a>
+                                    <a href="/admin/vagas/delete/<%-vaga.id%>"><i class="material-icons white-text">delete</i>Excluir</a>
+                                </div>
+                            </div>
+                        </div>
+                    <%}) %> 
+            </div>
+        </div>
+        <% }) %>
+        
+    </main>
+</main>
+<%-include('footer') %>

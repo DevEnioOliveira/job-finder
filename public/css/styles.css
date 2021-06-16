@@ -1,0 +1,25 @@
+/*
+RESET
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

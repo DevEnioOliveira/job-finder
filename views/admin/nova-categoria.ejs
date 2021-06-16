@@ -1,0 +1,15 @@
+<%- include('header-admin-back-categoria') %>
+<div class="container row">
+    <h4>Adicionar categoria</h4>
+    <form action="" class="col s12" method="POST">
+        <div class="input-field col s6">
+            <input value="<%categorias.id%>" type="hidden" class="" name="id">
+            <input id="titulo" type="text" class="" name="categoria_nome" placeholder="Insira o nome da categoria"> 
+            <label for="titulo"></label>
+            <button class="btn waves-effect waves-light">Salvar
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </form>
+</div>>
+<%- include('footer') %>

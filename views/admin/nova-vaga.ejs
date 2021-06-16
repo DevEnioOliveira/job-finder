@@ -1,0 +1,31 @@
+<%- include('header-admin-back-vaga') %>
+
+<div class="container row">
+    <h4>Adicionar vaga</h4>
+    <form action="" class="col s12" method="POST">
+        <div class="input-field col s12">
+            <label for="titulo"></label>
+            <input id="titulo" type="text" class="" name="titulo" placeholder="Insira o titulo da vaga"> 
+            <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" class="materialize-textarea" placeholder="Digite as informações da vaga" name="descricao"></textarea>
+                  <label for="textarea1"></label>
+                </div>
+             </div>  
+             <label></label>
+             <h6>Selecione a categoria: </h6>
+            <select class="browser-default" name="categoria_nome">
+                <%categorias.forEach(categoria => { %>
+                    <option value="<%=categoria.id%>"><%=categoria.categoria_nome%></option>
+                <% }) %>
+            </select>
+            <br>
+            <br>
+            <button class="btn waves-effect waves-light">Salvar
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </form>
+</div>>
+
+<%- include('footer') %>
